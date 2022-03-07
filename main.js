@@ -9,36 +9,41 @@ const sleEl= document.getElementById("sle");
 const ageEl= document.getElementById("age");
 const staEl= document.getElementById("sta");
 
-let pet_stats ={
+petStatsUpdates(){
+    let petStats ={
     "Hunger" : 0,
     "Boredom" : 0,
     "Sleep" : 0,
     "Age" : 0,
     "Alive" : true,
+    }
 }
-
+$('.feedButton').click(feedClicked);
+$('.sleepButton').click(sleepClicked);
+$('.playButton').click(playClicked);
 
 
 function feedClicked(){
-    let food = 6;
-    if(food>=10){
-        console.log("Your pet died! You let your pet play too much!")
+    petStats['Hunger'] = petStats['Hunger'] - 1;
+    petStats['Sleep'] = petStats['Sleep'] + 1;
+    petStatsUpdates();
     }   
 };
 
 function sleepClicked(){
-    let sleep =6;
-    if(sleep>=10){
-        console.log("Your pet died! You let your pet sleep too much!")
-    }   
-
+    petStats['Boredom'] = petStats['Boredom'] + 1;
+    petStats['Hunger'] = petStats['Hunger'] + 1;
+    petStats['Sleep'] = petStats['Sleep'] - 1;
+    petStatsUpdates();
+    }
 };
 
 function playClicked(){
-    let play =6;
-    if(play>=10){
-        console.log("Your pet died! You let your pet play too much!")
-    }   
+    petStats['Hunger'] = petStats['Hunger'] + 1;
+    etStats['Boredom'] = petStats['Boredom'] - 1;
+    petStats['Sleep'] = petStats['Sleep'] + 2;
+    petStatsUpdates();
+    }
 };
 
 feedEl.addEventListener('click', feedClicked);
