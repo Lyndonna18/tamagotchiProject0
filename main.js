@@ -1,3 +1,4 @@
+// Pulling all the HTML elements
 const feedEl= document.getElementById("fButton");
 const sleepEl= document.getElementById("sButton");
 const playEl= document.getElementById("pButton");
@@ -9,7 +10,8 @@ const sleEl= document.getElementById("sle");
 const ageEl= document.getElementById("age");
 const staEl= document.getElementById("sta");
 
-petStatsUpdates(){
+// CHanging the Stats using an object and value pairs
+function petStatsUpdates(){
     let petStats ={
     "Hunger" : 0,
     "Boredom" : 0,
@@ -17,17 +19,18 @@ petStatsUpdates(){
     "Age" : 0,
     "Alive" : true,
     }
-}
+};
+
 $('.feedButton').click(feedClicked);
 $('.sleepButton').click(sleepClicked);
 $('.playButton').click(playClicked);
 
-
+// Button Functions when clicked
 function feedClicked(){
     petStats['Hunger'] = petStats['Hunger'] - 1;
     petStats['Sleep'] = petStats['Sleep'] + 1;
     petStatsUpdates();
-    }   
+    console.log("Feed Button Clicked")
 };
 
 function sleepClicked(){
@@ -35,7 +38,6 @@ function sleepClicked(){
     petStats['Hunger'] = petStats['Hunger'] + 1;
     petStats['Sleep'] = petStats['Sleep'] - 1;
     petStatsUpdates();
-    }
 };
 
 function playClicked(){
@@ -43,9 +45,16 @@ function playClicked(){
     etStats['Boredom'] = petStats['Boredom'] - 1;
     petStats['Sleep'] = petStats['Sleep'] + 2;
     petStatsUpdates();
-    }
 };
 
+// When to update petStats
+petStatsUpdates(){
+
+};
+
+// Conditionals for when the counts meet 10
+
+// Click button lines
 feedEl.addEventListener('click', feedClicked);
 sleepEl.addEventListener('click', sleepClicked);
 playEl.addEventListener('click', playClicked);
