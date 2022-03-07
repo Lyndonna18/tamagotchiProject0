@@ -7,21 +7,39 @@
     <title>Document</title>
     <script src ="main.js" async defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Righteous&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <h1>welcome to dragonSit!</h1>
-    <ul>
-        <li>Hunger: </li>
-        <li>Boredom:</li>
-        <li>Sleep:</li>
-        <li>Love:</li>
-        <li>Status:</li>
+    
+    <div class="container"> 
+        <img src="dragon_pic.jpeg" class="image"/>
+     </div>
+
+     <button id="fButton">FEED</button>
+     <button id ="sButton">SLEEP</button>
+     <button id="lButton">LOVE</button>
+ 
+     <ul style="list-style-type:none" class="stats">
+        <li id="hun">Hunger: </li>
+        <li id="bor">Boredom:</li>
+        <li id=" sle">Sleep:</li>
+        <li id="lov">Love:</li>
+        <li id="age">Age:</li>
+        <li id="sta">Status:</li>
     </ul>  
 
-    <button id="fButton">FEED</button>
-    <button id ="sButton">SLEEP</button>
-    <button id="Lbutton">LOVE</button>
 
 
+    <div class="inputMessage">
+        Hi name! My name is ____ and I am your Dragon! 
+    </div>  
+
+    <div class="instructions">Please feed me, love me, and put me to sleep and I will be your pet forever!
+    </div>
+    
 </body>
 </html>

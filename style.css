@@ -1,7 +1,40 @@
-body{
-    background-color: #9b6405;
-}
+html {
+    background: url(3886199.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+  }
 
 h1{
+    font-family: 'Poiret One', cursive;
+font-family: 'Righteous', cursive;
    text-align: center; 
+}
+
+.inputMessage{
+    position: absolute;
+    top: 450px;
+    right: 10px;
+    font-size: 18px;
+}
+
+.instructions{
+    position: absolute;
+    top: 480px;
+    right: 10px;
+    font-size: 18px;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Righteous', cursive;
+}
+
+ul{
+    position: absolute;
+    top: 140px;
+    right: 100px;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Righteous', cursive;
+}
+
+.container{
+    text-align: left;
 }
